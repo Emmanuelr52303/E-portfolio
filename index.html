@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/9ac74e04c6.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "RosTUIENx50GMpmdG",
+          });
+      })();
+    </script>
   </head>
   <body>
     <section id="landing-page">
@@ -17,7 +28,7 @@
           <img id="personal-logo" src="./assets/ER_Logo.png" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -26,19 +37,19 @@
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
           </li>
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModal()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
+          <li class="nav__link click" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect--black"
@@ -57,7 +68,7 @@
             object-oriented design, data structures, algorithms, and operating
             systems.
             <br />
-            Here's a bit more <b class="text_green">about me</b>.
+            Here's a bit more <b class="text_green click" onclick="toggleModal()">about me</b>.
           </p>
           <div class="header__links">
             <a
@@ -84,7 +95,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -143,20 +154,22 @@
         <div class="modal__half modal__contact">
           <h3 class="modal__title">Let's have a chat!</h3>
           <h4 class="modal__sub-title">I'm currently open to new oppurtunites</h4>
-          <form id="contact__form" action="">
+          <form id="contact__form" onsubmit="contact(event)" action="">
             <div class="form__item">
               <label class="form__item--label">Name</label>
-              <input type="text" name="user_name" class="input" required></input>
+              <input type="text" name="user_name" class="input" required>
             </div>
             <div class="form__item">
               <label class="form__item--label">Email</label>
-              <input type="email" name="user_email" class="input" required></input>
+              <input type="email" name="user_email" class="input" required>
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label>
-              <textarea type="text" name="message" class="input" required></textarea>
+              <textarea name="message" class="input" required></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">Send it my way</button>
+            <button type="submit" id="contact__submit" class="form__submit">
+              Send it my way
+            </button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
@@ -164,8 +177,8 @@
           <div class="modal__overlay modal__overlay--success">
             Thanks for the message! Looking forward to speaking with you soon.
           </div>
+          <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
     <section id="projects">
@@ -236,7 +249,7 @@
             footer__social--link
             link__hover-effect
             link__hover-effect--white
-            ">
+            " onclick="toggleModal()">
               Contact
             </a>
             <a href="#" class="

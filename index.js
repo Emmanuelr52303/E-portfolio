@@ -44,3 +44,17 @@ function toggleContrast() {
         document.body.classList.remove("dark-theme")
     }
 }
+
+function moveBackground(event) {
+    const shapes = document.querySelectorAll(".shape")
+    const x = event.clientX / 20
+    const y = event.clientY / 20
+    
+    for(let i = 0; i < shapes.length; i++){
+        if(i % 2 === 0){
+            shapes[i].style.transform = `translate(${x}px, ${y}px`
+        } else {
+            shapes[i].style.transform = `translate(${-x}px, ${-y}px`
+        }
+    }
+}

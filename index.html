@@ -22,7 +22,7 @@
     </script>
   </head>
   <body>
-    <section id="landing-page">
+    <section id="landing-page" onmousemove="moveBackground(event)">
       <nav>
         <figure>
           <img id="personal-logo" src="./assets/ER_Logo.png" alt="" />
@@ -95,9 +95,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -180,6 +182,15 @@
           <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
         </div>
       </div>
+      <img src="./assets/semi circle.svg" class="shape shape--0">
+      <img src="./assets/circle.svg" class="shape shape--1">
+      <img src="./assets/squiggly.svg" class="shape shape--2">
+      <img src="./assets/circle.svg" class="shape shape--3">
+      <img src="./assets/triangle.svg" class="shape shape--4">
+      <img src="./assets/circle.svg" class="shape shape--5">
+      <img src="./assets/squiggly.svg" class="shape shape--6">
+      <img src="./assets/circle.svg" class="shape shape--7">
+      <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
       <div class="container">
@@ -188,6 +199,38 @@
             Here are some of my <apn class="text_green">projects.</apn>
           </h1>
           <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/DermaScope.webp"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">DermaScope</h3>
+                  <h4 class="project__description--sub-title">
+                    Python, Flutter, TensorFlow
+                  </h4>
+                  <p class="project__description--para">
+                    My team and I built a device that can capture high-quality
+                    images of skin lesions, and I developed an app that can take
+                    those images and analyze them for potential skin cancer. The
+                    app recieves from the image from the dermatoscope we built
+                    and analyzes the image using tensorflow to determine if a
+                    person has a risk of cancer.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Emmanuel052303/DermoLight"
+                      target="_blank"
+                      class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li class="project">
               <div class="project__wrapper">
                 <img

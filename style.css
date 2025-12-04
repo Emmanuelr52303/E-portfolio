@@ -693,6 +693,7 @@ SHAPES
     .language__name{
         font-size: 12px;
     }
+
 }
 
 /* Small phones*/
@@ -733,15 +734,19 @@ SHAPES
         left: 32px;
     }
     .project__description--title{
-        font-size: 24px;
+        font-size: 18px;
     }
     .project__description--sub-title{
-        font-size: 14px;
+        font-size: 12px;
     }
     .project__description--para{
-        font-size: 12px;
+        font-size: 8px;
         margin: 8px 0;
         margin-right: 24px;
+    }
+
+    .shape {
+        visibility: hidden;
     }
 }
 

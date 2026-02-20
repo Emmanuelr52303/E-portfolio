@@ -685,7 +685,7 @@ SHAPES
         margin: 4px 0 8px 0;
     }
     .modal__para {
-        font-size: 12px;
+        font-size: 12px !important;
         margin-bottom: 12px;
         line-height: 2;
         font-weight: 400;
@@ -776,13 +776,17 @@ SHAPES
         margin: 4px 0 8px 0;
     }
     .modal__para {
-        font-size: 12px;
+        font-size: 16px;
         margin-bottom: 8px;
         line-height: 1.5;
         font-weight: 400;
     }
     .language__name{
         font-size: 12px;
+    }
+    .language__img{
+        max-height: 48px;
+        max-width: 48px
     }
 
     .form__item{

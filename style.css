@@ -764,4 +764,31 @@ SHAPES
     .project__img{
         height: 100%;
     }
+
+    .modal {
+        height: 500px;
+    }
+    .modal__title {
+        font-size: 28px;
+    }
+    .modal__sub-title {
+        font-size: 20px;
+        margin: 4px 0 8px 0;
+    }
+    .modal__para {
+        font-size: 12px;
+        margin-bottom: 8px;
+        line-height: 1.5;
+        font-weight: 400;
+    }
+    .language__name{
+        font-size: 12px;
+    }
+
+    .form__item{
+        font-size: 12px;
+    }
+    .input{
+        height: 36px;
+    }
 }
